@@ -138,7 +138,7 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/gaia_node.cpp)
-add_executable(spawnRobot_client src/robot_rwc_cpp_client.cpp)
+add_executable(spawnRobot_client src/spawn_robot_client.cpp)
 target_link_libraries(spawnRobot_client ${catkin_LIBRARIES})
 #add_dependencies(spawnRobot_client gaia_gencpp)
 add_executable(spawnShelf_client src/spawn_shelf_client.cpp)

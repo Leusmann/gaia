@@ -18,12 +18,10 @@ int main(int argc, char **argv)
 
   world_control_msgs::SpawnRobot srv;
   
-//  srv.request.name = "Kronos";
   std::ifstream in("/home/nleusmann/Documents/Sandbox/UE4_Environment/URoboSimExampleRobots/pr2/model.sdf");
 //std::ifstream in("/home/nleusmann/Documents/Sandbox/UE4_Environment/URoboSimExampleRobots/iai_donbot_description/robots/iai_donbot_unreal.sdf");
   if(in)
   {
-	  ROS_INFO_STREAM("Reading file /home/nleusmann/Documents/Sandbox/UE4_Environment/URoboSimExampleRobots/iai_donbot_description/iai_donbot_unreal.sdf" );
 	  std::string sSDFfile((std::istreambuf_iterator<char>(in)),std::istreambuf_iterator<char>());
           srv.request.name=sSDFfile;
   }
