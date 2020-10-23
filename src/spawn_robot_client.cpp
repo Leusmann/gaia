@@ -1,7 +1,7 @@
  #include <fstream>
 #include <streambuf>
 #include "ros/ros.h"
-#include "world_control_msgs/SpawnRobot.h"
+#include "modul_spawner_msgs/SpawnRobot.h"
 
 int main(int argc, char **argv)
 {
@@ -9,14 +9,14 @@ int main(int argc, char **argv)
 
   ros::NodeHandle n;
 
-  ros::ServiceClient client = n.serviceClient<world_control_msgs::SpawnRobot>("pie_rwc/spawn_robot");
+  ros::ServiceClient client = n.serviceClient<modul_spawner_msgs::SpawnRobot>("pie_rwc/spawn_robot");
   bool errorreason;
   bool exsits = ros::service::exists("pie_rwc/spawn_robot",errorreason);
   ROS_INFO_STREAM("Topic exsits" << exsits);
   ROS_INFO_STREAM("Topic exsits errorreason " + errorreason);
   ros::service::waitForService("pie_rwc/spawn_robot",600);
 
-  world_control_msgs::SpawnRobot srv;
+  modul_spawner_msgs::SpawnRobot srv;
   
   std::ifstream in("/home/nleusmann/Documents/Sandbox/UE4_Environment/URoboSimExampleRobots/pr2/model.sdf");
 //std::ifstream in("/home/nleusmann/Documents/Sandbox/UE4_Environment/URoboSimExampleRobots/iai_donbot_description/robots/iai_donbot_unreal.sdf");

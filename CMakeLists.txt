@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   world_control_msgs
+  modul_spawner_msgs
   #  message_generation
 )
 
