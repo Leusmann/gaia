@@ -146,6 +146,8 @@ add_executable(spawnShelf_client src/spawn_shelf_client.cpp)
 target_link_libraries(spawnShelf_client ${catkin_LIBRARIES})
 add_executable(spawnItems_client src/spawn_item_client.cpp)
 target_link_libraries(spawnItems_client ${catkin_LIBRARIES})
+add_executable(highlightActor_client src/highlight_Actor_client.cpp)
+target_link_libraries(highlightActor_client ${catkin_LIBRARIES})
 
 
 ## Rename C++ executable without prefix

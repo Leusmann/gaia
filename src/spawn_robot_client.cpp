@@ -29,6 +29,7 @@ int main(int argc, char **argv)
   {
   	srv.request.name = "PR2";
   }
+  //srv.request.id="42";
   if (!client.call(srv))
   {
      ROS_ERROR("Failed to call service client");

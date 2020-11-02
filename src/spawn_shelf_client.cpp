@@ -74,7 +74,8 @@ if(infile)
        {
            i=0;
            ROS_INFO_STREAM("Case 8: " << cell);
-           srv.request.physics_properties.mobility=std::stoi(cell);  // set to movable if you plan to update the models pose over time. Otherwise SetModelPose will fail
+           //srv.request.physics_properties.mobility=0;
+	   srv.request.physics_properties.mobility=std::stoi(cell);  // set to movable if you plan to update the models pose over time. Otherwise SetModelPose will fail
 
            //send message
            if (!client.call(srv))
