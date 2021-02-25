@@ -1,0 +1,6 @@
+<launch>
+    <arg name="InhighlightId" default="42"/>
+    <param name="highlightId" type="str" value="$(arg InhighlightId)" />
+    <node pkg="gaia" type="highlightActor_client" name="gaia" output="screen">
+    </node>
+</launch>
